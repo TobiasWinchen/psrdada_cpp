@@ -6,6 +6,7 @@ ENDIF (PSRDADA_INCLUDE_DIR)
 FIND_PATH(PSRDADA_INCLUDE_DIR dada_def.h
     PATHS ${PSRDADA_INC_DIR}
     ${PSRDADA_INSTALL_DIR}/include
+    /usr/local/include/psrdada
     /usr/local/include
     /usr/include )
 message("Found ${PSRDADA_INCLUDE_DIR} : ${PSRDADA_INSTALL_DIR}")
