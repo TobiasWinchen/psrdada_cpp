@@ -1,7 +1,6 @@
-option(ENABLE_CUDA "Enable CUDA algorithms. Requires CUDA toolkit to be installed" OFF)
+option(ENABLE_CUDA "Enable CUDA algorithms. Requires CUDA toolkit to be installed" ON)
 if(ENABLE_CUDA)
 
-  cmake_minimum_required(VERSION 2.8)
   find_package(CUDA REQUIRED)
   include_directories(${CUDA_TOOLKIT_INCLUDE})
 
