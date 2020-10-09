@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # cmake setup.
-list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
 # default installtion locations (note these will be prefixed by ${CMAKE_INSTALL_PREFIX})
 if(NOT LIBRARY_INSTALL_DIR)
@@ -70,3 +70,6 @@ if (DEBUG_PRINT)
     message(STATUS "****************************************************************************")
     message(STATUS "")
 endif (DEBUG_PRINT)
+
+
+enable_testing()
