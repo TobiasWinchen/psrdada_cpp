@@ -7,5 +7,6 @@ set(
     src/UnpackerTester.cu
 )
 cuda_add_executable(gtest_paf ${gtest_paf_src} )
-target_link_libraries(gtest_paf ${PSRDADA_CPP_EFFELSBERG_PAF_LIBRARIES} ${CUDA_CUFFT_LIBRARIES})
+
+target_link_libraries(gtest_paf ${PSRDADA_CPP_EFFELSBERG_PAF_LIBRARIES} ${CUDA_CUFFT_LIBRARIES} ${GTEST_LIBRARIES})
 add_test(gtest_paf gtest_paf --test_data "${CMAKE_CURRENT_LIST_DIR}/data")

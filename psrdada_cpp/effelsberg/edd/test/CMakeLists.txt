@@ -14,6 +14,7 @@ set(gtest_edd_src
     src/EDDPolnMergeTester.cpp
 )
 cuda_add_executable(gtest_edd ${gtest_edd_src} )
-target_link_libraries(gtest_edd ${PSRDADA_CPP_EFFELSBERG_EDD_LIBRARIES} ${CUDA_CUFFT_LIBRARIES} -lcublas)
+target_link_libraries(gtest_edd ${PSRDADA_CPP_EFFELSBERG_EDD_LIBRARIES} ${CUDA_CUFFT_LIBRARIES} -lcublas  ${GTEST_LIBRARIES})
+
 add_test(gtest_edd gtest_edd --test_data "${CMAKE_CURRENT_LIST_DIR}/data")
 

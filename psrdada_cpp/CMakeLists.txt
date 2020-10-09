@@ -1,8 +1,7 @@
 # define the cheetah libraries
 set(PSRDADA_CPP_LIBRARIES ${CMAKE_PROJECT_NAME} ${DEPENDENCY_LIBRARIES})
 
-include_directories(..)
-include_directories(${PROJECT_BINARY_DIR})
+include_directories(${CMAKE_SOURCE_DIR})
 
 set(psrdada_cpp_src
     src/cli_utils.cpp
